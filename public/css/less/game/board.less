@@ -1,0 +1,335 @@
+#game {
+	background-color: white;
+	background-image: url(../img/grass.png);
+	position: relative;
+	width: 100%;
+	margin: auto;
+	.box-shadow(0px 2px 20px rgba(0, 0, 0, .1));
+	.border-radius(2px);
+	margin-bottom: 30px;
+}
+
+#game.waiting {
+	opacity: .5;
+}
+
+
+#game.intensify {
+	.transition(-webkit-filter 3s ease-in);
+	-webkit-filter: contrast(10) saturate(0) hue-rotate(3600deg);
+}
+
+
+#game.lose {
+	-webkit-filter: saturate(0);
+}
+#game #entities {
+	position: absolute;
+	width: 100%;
+}
+
+#game #entities .entity {
+	position: absolute;
+}
+
+#game #entities .sprite {
+	position: absolute;
+}
+
+#game .entity.anaconda {
+	//background-color: #000;
+	.transition(~"top 0.06s linear, left 0.06s linear");
+}
+
+#game .entity.anaconda.head {
+	//background-color: #fb0a2a;
+	z-index: 1;
+	box-shadow: none;
+	//box-shadow: 0px 0px 10px 0px rgba(251, 10, 42, 0.82);
+}
+
+#game .entity.anaconda.head .sprite {
+	background-image: url('../img/obama.png');
+	background-size: 100% 100%;
+	width: 25px;
+	height: 35px;
+	top: -39px;
+	left: -2px;
+}
+
+#game .entity.anaconda.segment .sprite, #game .entity.anaconda.butt .sprite {
+	background-image: url('../img/troop.png');
+	background-size: 100%;
+	width: 25px;
+	height: 25px;
+	top: -29px;
+	left: -4px;
+}
+/*
+#game .entity.anaconda.head[lookat="0"] .sprite {
+	.rotate(270deg);
+	top: -17px;
+	left: -10px;
+}
+
+#game .entity.anaconda.head[lookat="1"] .sprite {
+	.rotate(180deg);
+	top: -10px;
+	left: -3px;
+}
+
+#game .entity.anaconda.head[lookat="2"] .sprite {
+	.rotate(90deg);
+	top: -16px;
+	left: 6px;
+}
+
+#game .entity.anaconda.head[lookat="3"] .sprite {
+	.rotate(0deg);
+}
+*/
+/*
+#game .entity.anaconda.segment[lookat="topleft"] {
+	.border-radius(0 8px 0 0);
+	//border-top: 3px solid #000;
+	//border-right: 3px solid #000;
+}
+#game .entity.anaconda.segment[lookat="topright"] {
+	.border-radius(8px 0 0 0);
+	//border-left: 3px solid #000;
+	//border-top: 3px solid #000;
+}
+
+#game .entity.anaconda.segment[lookat="lefttop"] {
+	.border-radius(0 0 0 8px);
+	//border-bottom: 3px solid #000;
+	//border-left: 3px solid #000;
+}
+
+#game .entity.anaconda.segment[lookat="righttop"] {
+	.border-radius(0 0 8px 0);
+	//border-bottom: 3px solid #000;
+	//border-right: 3px solid #000;
+}
+
+#game .entity.anaconda.segment[lookat="bottomleft"] {
+	.border-radius(0 0 8px 0);
+	//border-bottom: 3px solid #000;
+	//border-right: 3px solid #000;
+}
+
+#game .entity.anaconda.segment[lookat="bottomright"] {
+	.border-radius(0 0 0 8px);
+	//border-bottom: 3px solid #000;
+	//border-left: 3px solid #000;
+}
+
+#game .entity.anaconda.segment[lookat="leftbottom"] {
+	.border-radius(8px 0 0 0);
+	//border-top: 3px solid #000;
+	//border-left: 3px solid #000;
+}
+
+#game .entity.anaconda.segment[lookat="rightbottom"] {
+	.border-radius(0 8px 0 0);
+	//border-top: 3px solid #000;
+	//border-right: 3px solid #000;
+}
+
+#game .entity.anaconda.segment[lookat="top"], #game .entity.anaconda.segment[lookat="bottom"] {
+	//border-left: 3px solid #000;
+	//border-right: 3px solid #000;
+}
+
+#game .entity.anaconda.segment[lookat="left"], #game .entity.anaconda.segment[lookat="right"] {
+	//border-top: 3px solid #000;
+	//border-bottom: 3px solid #000;
+}
+
+#game .entity.anaconda.butt {
+	.border-radius(8px 0 0 8px);
+	//border: 3px solid #000;
+}
+
+#game .entity.anaconda.butt[lookat="bottom"] {
+	.border-radius(8px 8px 0 0);
+	//border-bottom: none;
+}
+
+#game .entity.anaconda.butt[lookat="top"] {
+	.border-radius(0 0 8px 8px);
+	//border-top: none;
+}
+#game .entity.anaconda.butt[lookat="left"] {
+	.border-radius(0 8px 8px 0);
+	//border-left: none;
+}
+#game .entity.anaconda.butt[lookat="right"] {
+	.border-radius(8px 0 0 8px);
+	//border-right: none;
+
+}
+*/
+
+#game .entity.tree {
+	//background-color: #2ECC71;
+}
+
+#game .entity.stone {
+	//background-color: #22313F;
+	z-index: 2;
+}
+
+#game .entity.stone .sprite {
+	background-image: url(../img/sprite.png);
+	width: 29px;
+	height: 30px;
+	left: -4px;
+	top: -7px;
+	background-position: -120px -97px;
+}
+
+#game .entity.tree1 .sprite {
+	background-image: url(../img/sprite.png);
+	width: 13px;
+	height: 32px;
+	left: 3px;
+	top: -17px;
+	background-position: -21px -39px;
+}
+
+#game .entity.tree2 .sprite {
+	background-image: url(../img/sprite.png);
+	width: 13px;
+	height: 32px;
+	left: 3px;
+	top: -16px;
+	background-position: -37px -42px;
+}
+
+#game .entity.bush1 .sprite {
+	background-image: url(../img/sprite.png);
+	width: 16px;
+	height: 16px;
+	left: 2px;
+	top: -1px;
+	background-position: -75px -205px;
+}
+
+#game .entity.bush2 .sprite {
+	background-image: url(../img/sprite.png);
+	width: 16px;
+	height: 25px;
+	left: 2px;
+	top: -8px;
+	background-position: -138px -46px;
+}
+
+#game .entity.cactus1 .sprite {
+	background-image: url(../img/sprite.png);
+	width: 46px;
+	height: 48px;
+	left: -13px;
+	top: -26px;
+	background-position: -48px -2px;
+}
+
+#game .entity.cactus2 .sprite {
+	background-image: url(../img/sprite.png);
+	width: 38px;
+	height: 51px;
+	left: -9px;
+	top: -30px;
+	background-position: -98px -1px;
+}
+
+#game .entity.stickman .sprite:before {
+	content: '';
+	position: absolute;
+	background-image: url(../img/stickman.png);
+	height: 25px;
+	width: 14px;
+	background-position:0px 0;
+	-webkit-animation-name:stickman;
+	-webkit-animation-duration:0.2s;
+	-webkit-animation-timing-function:steps(3);
+	-webkit-animation-iteration-count:infinite;
+	animation-name:stickman;
+	animation-duration:0.2s;
+	animation-timing-function:steps(3);
+	animation-iteration-count:infinite;
+	z-index: -1;
+}
+
+#game .entity.stickman .sprite:after {
+	content: '';
+	position: absolute;
+	background-image: url(../img/sprite.png);
+	height: 5px;
+	width: 9px;
+	background-position: -17px -182px;
+	z-index: -1;
+	bottom: -20px;
+	left: 10px;
+	opacity: .3;
+}
+
+#game .entity.flipped, #game .entity.stickman[lookat="left"] .sprite:before, #game .entity.stickman[lookat="bottom"] .sprite:before, #game .entity.stickman[lookat="bottomleft"] .sprite:before {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+#game .entity.victim {
+	.transition(~"top 0.06s linear, left 0.06s linear");
+}
+
+#game .entity.victim .sprite:before {
+	bottom: -19px;
+	left: 8px;
+}
+
+#game .entity.anaconda .sprite:before {
+	bottom: -19px;
+	left: 6px;
+}
+
+#game .entity.anaconda.segment .sprite:before, #game .entity.anaconda.butt .sprite:before {
+	bottom: -19px;
+	left: 8px;
+}
+
+@-webkit-keyframes stickman {
+	100%{
+		background-position:-60px 0;
+	}
+}
+
+@keyframes stickman {
+	100%{
+		background-position:-60px 0;
+	}
+}
+
+#game .entity.victim .sprite{
+	background-image: url('../img/benouz.png');
+	background-size: 100% 100%;
+	width: 25px;
+	height: 35px;
+	top: -39px;
+	left: -6px;
+}
+
+#game .group.anaconda {
+	//-webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .1));
+}
+
+#top td {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 100px;
+}
